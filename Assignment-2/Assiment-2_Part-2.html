@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Table template</title>
+    <title>Planetary Data</title>
     <style>
       html {
         font-family: sans-serif;
@@ -44,6 +43,72 @@
     </style>
   </head>
   <body>
-    <h1>Table template</h1>
+    <h1>Planetary Data</h1>
+    <table id="planetaryTable">
+      <caption>Data about the planets of our solar system</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mass (10<sup>24</sup>kg)</th>
+          <th>Diameter (km)</th>
+          <th>Density (kg/m<sup>3</sup>)</th>
+          <th>Gravity (m/s<sup>2</sup>)</th>
+          <th>Length of day (hours)</th>
+          <th>Distance from Sun (10<sup>6</sup>km)</th>
+          <th>Mean temperature (°C)</th>
+          <th>Number of moons</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Planetary data will be populated here -->
+      </tbody>
+    </table>
+
+    <script>
+      // Planetary data
+      var planetaryData = [
+        {
+          name: "Mercury",
+          mass: 0.330,
+          diameter: 4879,
+          density: 5427,
+          gravity: 3.7,
+          lengthOfDay: 4222.6,
+          distanceFromSun: 57.9,
+          meanTemperature: 167,
+          numberOfMoons: 0,
+          notes: "Closest to the Sun"
+        },
+        // Add other planetary data here
+      ];
+
+      // Function to populate the table with data
+      function populateTable() {
+        var tableBody = document.querySelector("#planetaryTable tbody");
+
+        planetaryData.forEach(function(planet) {
+          var row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td>${planet.name}</td>
+            <td>${planet.mass}</td>
+            <td>${planet.diameter}</td>
+            <td>${planet.density}</td>
+            <td>${planet.gravity}</td>
+            <td>${planet.lengthOfDay}</td>
+            <td>${planet.distanceFromSun}</td>
+            <td>${planet.meanTemperature}</td>
+            <td>${planet.numberOfMoons}</td>
+            <td>${planet.notes}</td>
+          `;
+
+          tableBody.appendChild(row);
+        });
+      }
+
+      // Call the function to populate the table
+      populateTable();
+    </script>
   </body>
 </html>
