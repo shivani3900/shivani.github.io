@@ -9,48 +9,16 @@
     <meta name="viewport" content="width=device-width">
     <title>Planetary Data</title>
     <style>
-      html {
-        font-family: sans-serif;
-      }
-
-      table {
-        border-collapse: collapse;
-        border: 2px solid rgb(200,200,200);
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-      }
-
-      td, th {
-        border: 1px solid rgb(190,190,190);
-        padding: 10px 20px;
-      }
-
-      th {
-        background-color: rgb(235,235,235);
-      }
-
-      td {
-        text-align: center;
-      }
-
-      tr:nth-child(even) td {
-        background-color: rgb(250,250,250);
-      }
-
-      tr:nth-child(odd) td {
-        background-color: rgb(245,245,245);
-      }
-
-      caption {
-        padding: 10px;
-      }
+      /* CSS styles for the table */
     </style>
   </head>
   <body>
     <h1>Planetary Data</h1>
+    <!-- Table to display planetary data -->
     <table id="planetaryTable">
       <caption>Data about the planets of our solar system</caption>
       <thead>
+        <!-- Table header -->
         <tr>
           <th>Name</th>
           <th>Mass (10<sup>24</sup>kg)</th>
@@ -65,35 +33,27 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Planetary data will be populated here -->
+       
       </tbody>
     </table>
 
     <script>
-      // Planetary data
+      // Planetary data array
       var planetaryData = [
-        {
-          name: "Mercury",
-          mass: 0.330,
-          diameter: 4879,
-          density: 5427,
-          gravity: 3.7,
-          lengthOfDay: 4222.6,
-          distanceFromSun: 57.9,
-          meanTemperature: 167,
-          numberOfMoons: 0,
-          notes: "Closest to the Sun"
-        },
-        // Add other planetary data here
+        // Data objects for each planet
       ];
 
       // Function to populate the table with data
       function populateTable() {
+        // Get the table body
         var tableBody = document.querySelector("#planetaryTable tbody");
 
+        // Loop through each planet's data
         planetaryData.forEach(function(planet) {
+          // Create a new row for the planet
           var row = document.createElement("tr");
 
+          // Fill the row with planet data
           row.innerHTML = `
             <td>${planet.name}</td>
             <td>${planet.mass}</td>
@@ -107,11 +67,12 @@
             <td>${planet.notes}</td>
           `;
 
+          // Append the row to the table body
           tableBody.appendChild(row);
         });
       }
 
-      // Call the function to populate the table
+      
       populateTable();
     </script>
   </body>
