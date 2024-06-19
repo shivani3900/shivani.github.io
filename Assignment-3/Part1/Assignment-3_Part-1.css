@@ -11,33 +11,44 @@
 }
 
 h1 {
+  /* Set heading color to hotpink */
   color: hotpink;
+  /* Set font size for heading */
   font-size: 2em;
+  /* Use Georgia or similar font for heading */
   font-family: Georgia, "Times New Roman", Times, serif;
+  /* Add a dotted purple border at the bottom */
   border-bottom: 10px dotted purple;
 }
 
 h2 {
+  /* Set font size for subheadings and making subheading Italic */
   font-size: 1.5em;
   font-style: italic;
 }
 
 .job-title {
+  /* Set job title color to light gray and bold */
   color: #999999;
   font-weight: bold;
 }
 
 a:link,
 a:visited {
+  /* Set link color to a shade of orange */
   color: #fb6542;
 }
 
 a:hover {
   text-decoration: none;
+  /* Change link color to green on hover */
   color: green;
 }
 ul{
+  /* Set background color for list to light gray */
   background-color: #eeeeee;
+  /* Add a purple border around the list */
   border: 5px solid purple;
+  /* Add padding inside the list */
   padding: 10px;
 }
