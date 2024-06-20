@@ -1,20 +1,28 @@
 /* <!-- Author : Shivani Patel
-  Date:20/06/24
-  Description: assignment 3 part 4 CSS   --> */
-  
+  Date: 20/06/24
+  Description: Assignment 3 Part 4 CSS 
+
+  This CSS file styles the body, logo, grid layout, navigation bar, photos grid, and feature sections of a webpage. --> */
+
   body {
+    /* Set the background color to white, text color to dark gray, 
+    removes default margins, and sets font properties. */
     background-color: #fff;
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
   }
-
+  
   img {
-      max-width: 100%;
-      display: block;
+    /* Ensures that images do not exceed their container's 
+    width and are displayed as block elements. */
+    max-width: 100%;
+    display: block;
   }
   
   .logo {
+    /* Increases the font size of the logo, adds padding, and 
+    centers it horizontally within a maximum width. */
     font-size: 200%;
     padding: 50px 20px;
     margin: 0 auto;
@@ -22,6 +30,8 @@
   }
   
   .grid {
+    /* Centers the grid layout, limits its width, 
+    sets up a grid with a main and a sidebar column, and adds gaps between items. */
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
@@ -29,7 +39,11 @@
     grid-template-columns: 3fr 1fr;
     gap: 20px;
   }
+  
   nav {
+    /* Styling the navigation bar with a black background,
+     padding, sticky positioning at the top, and a flexbox layout 
+     with space between items. */
     background-color: #000;
     padding: .5em;
     top: 0;
@@ -37,6 +51,8 @@
   }
   
   nav ul {
+    /* Removing default list styling and sets up a flexbox layout 
+    for the navigation items with space between them. */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -45,12 +61,16 @@
   }
   
   nav a {
+    /* Styling the navigation links with white color, removes underline, and adds
+     padding for better clickability. */
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
   }
   
   .photos {
+    /* Remove default list styling, sets up a grid layout with gaps 
+    between items, and distributes columns evenly. */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -58,9 +78,12 @@
     gap: 1px;
     grid-template-columns: 1fr 1fr;
   }
-
+  
   .feature {
-      width: 200px;
-      float: left;
-      margin: 0 20px 20px 0;
+    /* Styling features with a fixed width, left float, and margins 
+    to create spacing between items. */
+    width: 200px;
+    float: left;
+    margin: 0 20px 20px 0;
   }
+  
