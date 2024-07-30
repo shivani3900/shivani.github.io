@@ -1,3 +1,10 @@
+/* 
+Name: Shivani Patel
+File: assignment4_part1
+Date: 30th July, 2024
+Description: In this little balls will bounce around on the screen, and change color when they touch each other.
+*/
+
 const canavs = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
