@@ -29,14 +29,16 @@ randomizeButton.addEventListener('click', generateStory);
 function generateStory() {
   let updatedStory = storyTemplate;
 
-  const xElement = getRandomElement(insertXOptions);
-  const yElement = getRandomElement(insertYOptions);
-  const zElement = getRandomElement(insertZOptions);
+  // Getting random choices for each placeholder.
+  const xElement = getRandomElement(insertXOptions); // Selecting a random character.
+  const yElement = getRandomElement(insertYOptions); // Selecting a random place.
+  const zElement = getRandomElement(insertZOptions); // Selecting a random action.
 
-  updatedStory = updatedStory.replace(':insertx:', xElement);
-  updatedStory = updatedStory.replace(':insertx:', xElement);
-  updatedStory = updatedStory.replace(':inserty:', yElement);
-  updatedStory = updatedStory.replace(':insertz:', zElement);
+  // Replacing the placeholders with the random choices.
+  updatedStory = updatedStory.replace(':insertx:', xElement); // Replacing the first character placeholder.
+  updatedStory = updatedStory.replace(':insertx:', xElement); // Replacing the second character placeholder (same as the first).
+  updatedStory = updatedStory.replace(':inserty:', yElement); // Replacing the place placeholder.
+  updatedStory = updatedStory.replace(':insertz:', zElement); // Replacing the action placeholder.
 
   if (customNameInput.value.trim() !== '') {
     const customName = customNameInput.value.trim();
