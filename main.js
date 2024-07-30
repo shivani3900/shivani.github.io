@@ -63,7 +63,9 @@ while (balls.length < 25) {
 
         if (distace < balls[i].size + balls[j].size) {
             balls[i].velX = -balls[i].velX;
-            balls[i].velY = -balls[i].velX;;
+            balls[i].velY = -balls[i].velY;
+            balls[j].velX = -balls[j].velX;
+            balls[j].velY = -balls[j].velY;
         }
       }
     
