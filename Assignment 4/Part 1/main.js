@@ -6,3 +6,17 @@ function getRandomElement(array) {
   const index = Math.floor(Math.random() * array.length);
   return array[index];
 }
+const storyTemplate = 'It was 94 degrees Fahrenheit outside, so :insertx: went for a walk. When they arrived at :inserty:, they were shocked for a moment, then :insertz:. Bob saw the whole thing but wasn\'t surprised—:insertx: weighs 300 pounds, and it was a hot day.';
+
+const insertXOptions = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+const insertYOptions = ['the soup kitchen', 'Disneyland', 'the White House'];
+const insertZOptions = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+
+randomizeButton.addEventListener('click', generateStory);
+
+function generateStory() {
+  let updatedStory = storyTemplate;
+
+  const xElement = getRandomElement(insertXOptions);
+  const yElement = getRandomElement(insertYOptions);
+  const zElement = getRandomElement(insertZOptions);
