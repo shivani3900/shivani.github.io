@@ -30,3 +30,14 @@ function generateStory() {
     const customName = customNameInput.value.trim();
     updatedStory = updatedStory.replace('Bob', customName);
   }
+  if (document.querySelector('#uk').checked) {
+    const weightInStones = (300 * 0.0714286).toFixed(2) + ' stone';
+    const tempInCelsius = ((94 - 32) * 5 / 9).toFixed(2) + ' degrees Celsius';
+
+    updatedStory = updatedStory.replace('300 pounds', weightInStones);
+    updatedStory = updatedStory.replace('94 degrees Fahrenheit', tempInCelsius);
+  }
+
+  storyElement.textContent = updatedStory;
+  storyElement.style.visibility = 'visible';
+}
