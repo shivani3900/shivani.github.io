@@ -38,3 +38,5 @@ update() {
         this.velY = -this.velY;
       }
 }
+
+const balls = [];
