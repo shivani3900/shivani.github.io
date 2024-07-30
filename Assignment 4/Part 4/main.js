@@ -163,16 +163,16 @@ window.addEventListener('keydown', (e) => { // Adding an event listener to the w
     switch (e.key) {
         case 'w': // If the 'w' key was pressed.
             evilCircle.controls.up = true;
-            break;
+            break;// Exit switch statement.
         case 'a': // If 'a' key is pressed.
             evilCircle.controls.left = true;
-            break;
+            break;// Exit switch statement.
         case 's': // If 's' key is pressed.
             evilCircle.controls.down = true;
-            break;
+            break;// Exit switch statement.
         case 'd': // If 'd' key is pressed.
             evilCircle.controls.right = true;
-            break; 
+            break; // Exit switch statement.
     }
 });
 
