@@ -40,18 +40,22 @@ function generateStory() {
   updatedStory = updatedStory.replace(':inserty:', yElement); // Replacing the place placeholder.
   updatedStory = updatedStory.replace(':insertz:', zElement); // Replacing the action placeholder.
 
+  // Checking if the user is providing a custom name.
   if (customNameInput.value.trim() !== '') {
-    const customName = customNameInput.value.trim();
-    updatedStory = updatedStory.replace('Bob', customName);
+    const customName = customNameInput.value.trim(); // Getting the user's name.
+    updatedStory = updatedStory.replace('Bob', customName); // Replacing 'Bob' with the user's name.
   }
+
+  // Checking if the UK radio button is being selected.
   if (document.querySelector('#uk').checked) {
-    const weightInStones = (300 * 0.0714286).toFixed(2) + ' stone';
-    const tempInCelsius = ((94 - 32) * 5 / 9).toFixed(2) + ' degrees Celsius';
+    const weightInStones = (300 * 0.0714286).toFixed(2) + ' stone'; // Converting 300 pounds to stones.
+    const tempInCelsius = ((94 - 32) * 5 / 9).toFixed(2) + ' degrees Celsius'; // Converting 94 Fahrenheit to Celsius.
 
-    updatedStory = updatedStory.replace('300 pounds', weightInStones);
-    updatedStory = updatedStory.replace('94 degrees Fahrenheit', tempInCelsius);
+    updatedStory = updatedStory.replace('300 pounds', weightInStones); // Replacing pounds with stones.
+    updatedStory = updatedStory.replace('94 degrees Fahrenheit', tempInCelsius); // Replacing Fahrenheit with Celsius.
   }
 
-  storyElement.textContent = updatedStory;
-  storyElement.style.visibility = 'visible';
+  // Updating the story text and making sure it is visible.
+  storyElement.textContent = updatedStory; // Displaying the updated story text.
+  storyElement.style.visibility = 'visible'; // Ensuring the story is visible on the page.
 }
