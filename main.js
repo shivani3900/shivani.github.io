@@ -71,3 +71,13 @@ while (balls.length < 25) {
     
     }
 }
+
+function loop() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < balls.length; i++) {
+       balls[i].update();
+       balls[i].draw(); 
+    }
+
+}
