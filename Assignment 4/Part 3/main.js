@@ -65,61 +65,68 @@ update() {
         this.velY = -this.velY;
         this.velY = -this.velY;// Reversing the y velocity.
       }
+    // Checking if the ball is hitting the left edge of the canvas.
     if (this.x - this.size < 0) {
-      this.velX = -this.velX;
+      this.velX = -this.velX;// Reversing the x velocity.
     }
+    // Checking if the ball is hitting the bottom edge of the canvas.
     if (this.y + this.size > height) {
-      this.velY = -this.velY;
+      this.velY = -this.velY;// Reversing the y velocity.
     }
+    // Checking if the ball is hitting the top edge of the canvas.
     if (this.y - this.size < 0) {
-      this.velY = -this.velY;
+      this.velY = -this.velY;// Reversing the y velocity.
     }
 }
-
+// Creating an array to hold all the balls.
 const balls = [];
 
+// Generating 25 random balls.
 while (balls.length < 25) {
-  const size = Math.random() * 20 + 10;
-  const x = Math.random() * (width - size * 2) + size;
-  const y = Math.random() * (height - size * 2) + size;
-  const velX = Math.random() * 4 - 2;
-  const velY = Math.random() * 4 - 2;
+  const size = Math.random() * 20 + 10;// Generating a random size between 10 and 30.
+  const x = Math.random() * (width - size * 2) + size;// Generating a random x position.
+  const y = Math.random() * (height - size * 2) + size;// Generating a random y position.
+  const velX = Math.random() * 4 - 2;// Generating a random x velocity between -2 and 2.
+  const velY = Math.random() * 4 - 2;// Generating a random y velocity between -2 and 2.
   const color = 'rgb(' +
     Math.floor(Math.random() * 256) + ',' +
     Math.floor(Math.random() * 256) + ',' +
-    Math.floor(Math.random() * 256) + ')';
+    Math.floor(Math.random() * 256) + ')';// Generating a random color.
 
-  balls.push(new Ball(x, y, velX, velY, color, size));
+  balls.push(new Ball(x, y, velX, velY, color, size));// Creating a new Ball object and adding it to the array.
 }
-
+// Detecting collisions between balls.
 function collisionDetect() {
   for (let i = 0; i < balls.length; i++) {
     for (let j = i + 1; j < balls.length; j++) {
-      const dx = balls[i].x - balls[j].x;
-      const dy = balls[i].y - balls[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+      const dx = balls[i].x - balls[j].x;// Calculating the difference in x positions.
+      const dy = balls[i].y - balls[j].y;// Calculating the difference in y positions.
+      const distance = Math.sqrt(dx * dx + dy * dy);// Calculating the distance between the balls.
 
+      // Checking if the distance between balls is less than their combined sizes.
       if (distance < balls[i].size + balls[j].size) {
-        balls[i].velX = -balls[i].velX;
-        balls[i].velY = -balls[i].velY;
-        balls[j].velX = -balls[j].velX;
-        balls[j].velY = -balls[j].velY;
+        balls[i].velX = -balls[i].velX;// Reversing the x velocity of the first ball.
+        balls[i].velY = -balls[i].velY;// Reversing the y velocity of the first ball.
+        balls[j].velX = -balls[j].velX;// Reversing the x velocity of the second ball.
+        balls[j].velY = -balls[j].velY;// Reversing the y velocity of the second ball.
       }
     }
   }
 }
 
+// Running the animation loop.
 function loop() {
-  ctx.clearRect(0, 0, width, height);
+  ctx.clearRect(0, 0, width, height);// Clearing the canvas.
 
+  // Updating and drawing each ball.
   for (let i = 0; i < balls.length; i++) {
-    balls[i].update();
-    balls[i].draw();
+    balls[i].update();// Updating the ball’s position.
+    balls[i].draw();// Drawing the ball on the canvas.
   }
 
-  collisionDetect();
+  collisionDetect();// Detecting collisions between balls.
 
-  requestAnimationFrame(loop);
+  requestAnimationFrame(loop);// Requesting the next frame for continuous animation.
 }
-
+// This will run the animation loop continuously.
 loop();
