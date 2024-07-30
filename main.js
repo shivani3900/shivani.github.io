@@ -40,3 +40,16 @@ update() {
 }
 
 const balls = [];
+
+while (balls.length < 25) {
+    const size = Math.random() * 20 + 10;
+    const x = Math.random() * (width - size * 2) + size;const y = Math.random() * (height - size * 2) + size;
+    const velX = Math.random() * 4 - 2;
+    const velY = Math.random() * 4 - 2;
+    const color = 'rgb(' +
+      Math.floor(Math.random() * 256) + ',' +
+      Math.floor(Math.random() * 256) + ',' +
+      Math.floor(Math.random() * 256) + ')';
+  
+    balls.push(new Ball(x, y, velX, velY, color, size));
+  }
