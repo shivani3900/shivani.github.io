@@ -20,3 +20,13 @@ function generateStory() {
   const xElement = getRandomElement(insertXOptions);
   const yElement = getRandomElement(insertYOptions);
   const zElement = getRandomElement(insertZOptions);
+
+  updatedStory = updatedStory.replace(':insertx:', xElement);
+  updatedStory = updatedStory.replace(':insertx:', xElement);
+  updatedStory = updatedStory.replace(':inserty:', yElement);
+  updatedStory = updatedStory.replace(':insertz:', zElement);
+
+  if (customNameInput.value.trim() !== '') {
+    const customName = customNameInput.value.trim();
+    updatedStory = updatedStory.replace('Bob', customName);
+  }
