@@ -53,3 +53,19 @@ while (balls.length < 25) {
   
     balls.push(new Ball(x, y, velX, velY, color, size));
   }
+
+  function collisionDetect() {
+    for (let i = 0; i < balls.length; i++) {
+      for (let j = i + 1; j < balls.length; j++) {
+        const dx = balls[i].x - balls[j].x;
+        const dy = balls[i].y - balls[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distace < balls[i].size + balls[j].size) {
+            balls[i].velX = -balls[i].velX;
+            balls[i].velY = -balls[i].velX;;
+        }
+      }
+    
+    }
+}
