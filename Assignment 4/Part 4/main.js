@@ -152,20 +152,20 @@ const evilCircle = new EvilCircle(width / 2, height / 2, 2, 2, 30); // Creating 
 shapes.push(evilCircle); // Adding it to the array.
 
 // Handling keyboard controls.
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keydown', (e) => { // Adding an event listener to the window for keydown events.
     switch (e.key) {
-        case 'w':
+        case 'w': // If the 'w' key was pressed.
             evilCircle.controls.up = true;
             break;
-        case 'a':
+        case 'a': // If 'a' key is pressed.
             evilCircle.controls.left = true;
             break;
-        case 's':
+        case 's': // If 's' key is pressed.
             evilCircle.controls.down = true;
             break;
-        case 'd':
+        case 'd': // If 'd' key is pressed.
             evilCircle.controls.right = true;
-            break;
+            break; 
     }
 });
 
