@@ -53,17 +53,19 @@ update() {
       }
 }
 
+// Creating an array to hold all the balls.
 const balls = [];
 
 while (balls.length < 25) {
-    const size = Math.random() * 20 + 10;
-    const x = Math.random() * (width - size * 2) + size;const y = Math.random() * (height - size * 2) + size;
-    const velX = Math.random() * 4 - 2;
-    const velY = Math.random() * 4 - 2;
+    const size = Math.random() * 20 + 10;// Generating a random size between 10 and 30.
+    const x = Math.random() * (width - size * 2) + size;// Generating a random x position.
+    const y = Math.random() * (height - size * 2) + size;// Generating a random y position.
+    const velX = Math.random() * 4 - 2;// Generating a random x velocity between -2 and 2.
+    const velY = Math.random() * 4 - 2;// Generating a random y velocity between -2 and 2.
     const color = 'rgb(' +
       Math.floor(Math.random() * 256) + ',' +
       Math.floor(Math.random() * 256) + ',' +
-      Math.floor(Math.random() * 256) + ')';
+      Math.floor(Math.random() * 256) + ')';// Generating a random color.
   
     balls.push(new Ball(x, y, velX, velY, color, size));
   }
