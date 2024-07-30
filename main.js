@@ -80,4 +80,7 @@ function loop() {
        balls[i].draw(); 
     }
 
+    collisionDetect();
+
+    requestAnimationFrame(loop);
 }
