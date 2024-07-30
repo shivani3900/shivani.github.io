@@ -169,23 +169,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-window.addEventListener('keyup', (e) => {
-    switch (e.key) {
-        case 'w':
-            evilCircle.controls.up = false;
-            break;
-        case 'a':
-            evilCircle.controls.left = false;
-            break;
-        case 's':
-            evilCircle.controls.down = false;
-            break;
-        case 'd':
-            evilCircle.controls.right = false;
-            break;
-    }
-});
-
 // Running the animation loop.
 function loop() {
     ctx.clearRect(0, 0, width, height); // Clearing the canvas.
