@@ -1,3 +1,10 @@
+/* 
+Name: Shivani Patel
+File: assignment4_part1
+Date: 16th July, 2024
+Description: This script generates a silly story when the "Generate random story" button is pressed.
+*/
+
 const customNameInput = document.querySelector('#customname');
 const randomizeButton = document.querySelector('.randomize');
 const storyElement = document.querySelector('.story');
