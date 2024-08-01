@@ -31,4 +31,11 @@ imageFilenames.forEach(filename => {
     // Add the new image to the thumbBar
     thumbBar.appendChild(newImage);
 
- 
+    // Add click event listener to each thumbnail
+    newImage.addEventListener('click', () => {
+        displayedImage.setAttribute('src', `images/${filename}`);
+        displayedImage.setAttribute('alt', altTexts[filename]);
+    });
+});
+
+
