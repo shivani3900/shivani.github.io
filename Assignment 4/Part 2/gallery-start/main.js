@@ -38,4 +38,11 @@ imageFilenames.forEach(filename => {
     });
 });
 
-
+// Add click event listener to the button
+btn.addEventListener('click', () => {
+    if (overlay.classList.contains('dark')) {
+        overlay.classList.remove('dark');
+    } else {
+        overlay.classList.add('dark');
+    }
+});
