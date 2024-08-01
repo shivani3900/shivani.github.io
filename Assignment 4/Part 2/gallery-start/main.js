@@ -22,3 +22,13 @@ const altTexts = {
     'pic5.jpg': 'Fifth Image'
 };
 
+// Loop through image filenames and create thumbnails
+imageFilenames.forEach(filename => {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', `images/${filename}`);
+    newImage.setAttribute('alt', altTexts[filename]);
+
+    // Add the new image to the thumbBar
+    thumbBar.appendChild(newImage);
+
+ 
