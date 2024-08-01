@@ -1,3 +1,10 @@
+/* 
+Name: Shivani Patel
+File: assignment4_part2
+Date: 30th July, 2024
+Description: In this, we have created a collage of 5 iamges and it can darken and lighten also.
+*/
+
 // Select elements
 const displayedImage = document.querySelector('.displayed-img img');
 const thumbBar = document.querySelector('.thumb-bar');
