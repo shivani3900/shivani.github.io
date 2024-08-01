@@ -22,11 +22,11 @@ const imageFilenames = [
 
 // Declare constant object for image alternative text
 const altTexts = {
-    'pic1.jpg': 'First Image',
-    'pic2.jpg': 'Second Image',
-    'pic3.jpg': 'Third Image',
-    'pic4.jpg': 'Fourth Image',
-    'pic5.jpg': 'Fifth Image'
+    'pic1.jpg': 'This is the iamge of human eye',
+    'pic2.jpg': 'This is the iamge of sand',
+    'pic3.jpg': 'This is the image of flower',
+    'pic4.jpg': 'This is the image of ancient people',
+    'pic5.jpg': 'This is the image of butterfly.'
 };
 
 // Loop through image filenames and create thumbnails
