@@ -49,7 +49,7 @@ function generateStory() {
   // Checking if the UK radio button is being selected.
   if (document.querySelector('#uk').checked) {
     const weightInStones = (300 * 0.0714286).toFixed(2) + ' stone'; // Converting 300 pounds to stones.
-    const tempInCelsius = ((94 - 32) * 5 / 9).toFixed(2) + ' degrees Celsius'; // Converting 94 Fahrenheit to Celsius.
+    const tempInCelsius = ((94 - 32) * 5 / 9).toFixed(2) + ' degrees centigrate'; // Converting 94 Fahrenheit to Celsius.
 
     updatedStory = updatedStory.replace('300 pounds', weightInStones); // Replacing pounds with stones.
     updatedStory = updatedStory.replace('94 degrees Fahrenheit', tempInCelsius); // Replacing Fahrenheit with Celsius.
