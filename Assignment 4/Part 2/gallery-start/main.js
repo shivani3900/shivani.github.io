@@ -47,9 +47,14 @@ imageFilenames.forEach(filename => {
 
 // Add click event listener to the button
 btn.addEventListener('click', () => {
-    if (overlay.classList.contains('dark')) {
-        overlay.classList.remove('dark');
+    const btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+      btn.setAttribute('class','light');
+      btn.textContent = 'Lighten';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
     } else {
-        overlay.classList.add('dark');
+      btn.setAttribute('class','dark');
+      btn.textContent = 'Darken';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0)';
     }
-});
+  })
