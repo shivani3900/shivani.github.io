@@ -2,7 +2,7 @@
 Name: Shivani Patel
 File: assignment5
 Date: 8th August, 2024
-Description: This script makes little balls bounce around the screen and change color upon collision.
+Description: Web accessibility
 */
 
 /* || General setup */
@@ -62,7 +62,7 @@ p, li, table {
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: white;
+  background-color: ;
 }
 
 article, footer, .secondary {

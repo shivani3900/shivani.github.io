@@ -2,7 +2,7 @@
 Name: Shivani Patel
 File: assignment5
 Date: 8th August, 2024
-Description: In this, little balls will bounce around on the screen and change color when they touch each other.
+Description: Web accessibility
 */
 
 // functionality for showing/hiding the comments section
